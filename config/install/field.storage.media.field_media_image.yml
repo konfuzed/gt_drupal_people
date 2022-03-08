@@ -4,10 +4,13 @@ dependencies:
   module:
     - file
     - image
-    - node
-id: node.field_gtppl_image
-field_name: field_gtppl_image
-entity_type: node
+    - media
+  enforced:
+    module:
+      - media
+id: media.field_media_image
+field_name: field_media_image
+entity_type: media
 type: image
 settings:
   target_type: file
@@ -15,7 +18,7 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null

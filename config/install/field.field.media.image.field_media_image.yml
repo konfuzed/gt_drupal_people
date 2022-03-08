@@ -2,18 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_gtppl_image
-    - node.type.gt_people
+    - field.storage.media.field_media_image
+    - media.type.image
   module:
     - image
-id: node.gt_people.field_gtppl_image
-field_name: field_gtppl_image
-entity_type: node
-bundle: gt_people
+  enforced:
+    module:
+      - media
+id: media.image.field_media_image
+field_name: field_media_image
+entity_type: media
+bundle: image
 label: Image
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -29,7 +32,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null
