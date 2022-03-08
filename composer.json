@@ -10,11 +10,10 @@
     "keywords": [
         "Drupal",
         "Georgia Tech",
-        "Profiles""
+        "Profiles"
     ],
     "require": {
         "drupal/pathauto": "^1.9",
         "drupal/twig_tweak": "^3.1"
     }
 }
-
