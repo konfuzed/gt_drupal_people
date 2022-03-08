@@ -1,0 +1,7 @@
+gt_people.settings_form:
+   path: '/admin/config/system/gt-people'
+   defaults:
+     _title: 'GT People settings'
+     _form: 'Drupal\gt_people\Form\SettingsForm'
+   requirements:
+     _permission: 'administer gt_people configuration'
