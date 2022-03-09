@@ -1,0 +1,4 @@
+administer gt_people configuration:
+  title: 'Administer gt_people configuration'
+  description: 'Allows editing of all GT People.'
+  restrict access: true

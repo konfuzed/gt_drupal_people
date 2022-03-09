@@ -1,0 +1,6 @@
+services:
+  gt_people.event_subscriber:
+    class: Drupal\gt_people\EventSubscriber\GtPeopleSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

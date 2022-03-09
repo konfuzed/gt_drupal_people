@@ -13,8 +13,9 @@
 /**
  * Implements hook_field_widget_info_alter().
  */
+ /*
 function gt_people_field_widget_info_alter(array &$info) {
   $info['text_textarea']['field_types'][] = 'text';
   $info['string_textarea']['field_types'][] = 'string';
 }
-
+*/
