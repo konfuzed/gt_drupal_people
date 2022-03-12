@@ -1,0 +1,23 @@
+uuid: 22646e7f-6fc9-47d2-b600-bbeb19cfae35
+langcode: en
+status: true
+dependencies: {  }
+name: 'GT People HTML'
+format: gt_people_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <strong> <em> <code> <sub> <sup> <a href> <ul> <ol> <li>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

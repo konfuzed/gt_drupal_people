@@ -1,3 +1,4 @@
+uuid: e88cf39c-e87b-433d-85cf-3e91361b9dc5
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,10 @@ dependencies:
     - field.field.node.gt_people.field_gtppl_image
     - field.field.node.gt_people.field_gtppl_image_local
     - field.field.node.gt_people.field_gtppl_image_url
+    - field.field.node.gt_people.field_gtppl_name_display_html
+    - field.field.node.gt_people.field_gtppl_name_display_plain
+    - field.field.node.gt_people.field_gtppl_name_first
+    - field.field.node.gt_people.field_gtppl_name_last
     - field.field.node.gt_people.field_gtppl_phone
     - field.field.node.gt_people.field_gtppl_pronouns
     - field.field.node.gt_people.field_gtppl_publications
@@ -42,8 +47,11 @@ dependencies:
   module:
     - image
     - options
+    - telephone
     - text
     - user
+_core:
+  default_config_hash: j0QXopTSjcVuEP-ahJpYyEXlK6E-C1d2sKDmzxf3Lcs
 id: node.gt_people.default
 targetEntityType: node
 bundle: gt_people
@@ -54,7 +62,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 22
     region: content
   field_gtppl_bio_summary:
     type: string
@@ -62,21 +70,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 104
+    weight: 24
     region: content
   field_gtppl_biography:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 23
     region: content
   field_gtppl_bldg:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 141
+    weight: 14
     region: content
   field_gtppl_bldg_room:
     type: string
@@ -84,7 +92,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 142
+    weight: 16
     region: content
   field_gtppl_bldg_url_map:
     type: string
@@ -92,28 +100,29 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 140
+    weight: 15
     region: content
   field_gtppl_education:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 25
     region: content
   field_gtppl_email:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 9
     region: content
   field_gtppl_fax:
-    type: basic_string
+    type: telephone_link
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    weight: 107
+    weight: 10
     region: content
   field_gtppl_gtaccount:
     type: string
@@ -121,7 +130,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 108
+    weight: 11
     region: content
   field_gtppl_image:
     type: image
@@ -130,7 +139,7 @@ content:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 144
+    weight: 38
     region: content
   field_gtppl_image_local:
     type: entity_reference_entity_view
@@ -139,7 +148,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 145
+    weight: 39
     region: content
   field_gtppl_image_url:
     type: string
@@ -147,28 +156,60 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 146
+    weight: 40
     region: content
-  field_gtppl_phone:
-    type: basic_string
+  field_gtppl_name_display_html:
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 111
+    weight: 3
+    region: content
+  field_gtppl_name_display_plain:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_gtppl_name_first:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_gtppl_name_last:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gtppl_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_gtppl_pronouns:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 116
+    weight: 13
     region: content
   field_gtppl_publications:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 131
+    weight: 33
     region: content
   field_gtppl_research_group:
     type: string
@@ -176,7 +217,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 132
+    weight: 19
     region: content
   field_gtppl_research_group_url:
     type: string
@@ -184,14 +225,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 133
+    weight: 20
     region: content
   field_gtppl_research_history:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 134
+    weight: 34
     region: content
   field_gtppl_research_keywords:
     type: string
@@ -199,7 +240,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 135
+    weight: 35
     region: content
   field_gtppl_research_summary:
     type: string
@@ -207,21 +248,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 136
+    weight: 36
     region: content
   field_gtppl_roles:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 143
+    weight: 37
     region: content
   field_gtppl_salutation:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 137
+    weight: 4
     region: content
   field_gtppl_title_custom:
     type: string
@@ -229,14 +270,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 112
+    weight: 7
     region: content
   field_gtppl_title_custom_html:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 113
+    weight: 8
     region: content
   field_gtppl_title_custom_short:
     type: string
@@ -244,7 +285,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 115
+    weight: 6
     region: content
   field_gtppl_title_official:
     type: string
@@ -252,7 +293,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 114
+    weight: 5
     region: content
   field_gtppl_url_cv_resume:
     type: string
@@ -260,7 +301,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 138
+    weight: 17
     region: content
   field_gtppl_url_gscholar:
     type: string
@@ -268,7 +309,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 124
+    weight: 26
     region: content
   field_gtppl_url_orcid:
     type: string
@@ -276,7 +317,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 125
+    weight: 27
     region: content
   field_gtppl_url_personal:
     type: string
@@ -284,7 +325,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 139
+    weight: 18
     region: content
   field_gtppl_url_publons:
     type: string
@@ -292,7 +333,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 126
+    weight: 28
     region: content
   field_gtppl_url_pubmed:
     type: string
@@ -300,7 +341,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 127
+    weight: 29
     region: content
   field_gtppl_url_researcherid:
     type: string
@@ -308,7 +349,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 128
+    weight: 30
     region: content
   field_gtppl_url_researchgate:
     type: string
@@ -316,7 +357,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 129
+    weight: 31
     region: content
   field_gtppl_url_scopus:
     type: string
@@ -324,11 +365,11 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 130
+    weight: 32
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 21
     region: content
 hidden: {  }

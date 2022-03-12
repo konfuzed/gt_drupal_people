@@ -1,0 +1,20 @@
+uuid: 4d753058-dc23-4a15-96dd-a6e5f000c4da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_gtppl_name_display_html
+field_name: field_gtppl_name_display_html
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

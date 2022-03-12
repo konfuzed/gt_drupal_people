@@ -1,3 +1,4 @@
+uuid: 31b40890-e969-4621-bb53-e8b82d1bbf32
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,10 @@ dependencies:
     - field.field.node.gt_people.field_gtppl_image
     - field.field.node.gt_people.field_gtppl_image_local
     - field.field.node.gt_people.field_gtppl_image_url
+    - field.field.node.gt_people.field_gtppl_name_display_html
+    - field.field.node.gt_people.field_gtppl_name_display_plain
+    - field.field.node.gt_people.field_gtppl_name_first
+    - field.field.node.gt_people.field_gtppl_name_last
     - field.field.node.gt_people.field_gtppl_phone
     - field.field.node.gt_people.field_gtppl_pronouns
     - field.field.node.gt_people.field_gtppl_publications
@@ -46,6 +51,8 @@ dependencies:
     - path
     - telephone
     - text
+_core:
+  default_config_hash: zkcvJgKrYf9Goq2FN6beUvnYhntx8HfgcnVQpSV5UA4
 id: node.gt_people.default
 targetEntityType: node
 bundle: gt_people
@@ -152,6 +159,38 @@ content:
   field_gtppl_image_url:
     type: string_textfield
     weight: 166
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_name_display_html:
+    type: text_textfield
+    weight: 172
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_name_display_plain:
+    type: string_textfield
+    weight: 171
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_name_first:
+    type: string_textfield
+    weight: 170
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_name_last:
+    type: string_textfield
+    weight: 173
     region: content
     settings:
       size: 60
