@@ -20,4 +20,4 @@ default_value:
     format: gt_people_html
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: text_long
