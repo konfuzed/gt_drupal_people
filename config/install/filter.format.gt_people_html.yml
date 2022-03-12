@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 name: 'GT People HTML'
 format: gt_people_html
-weight: 0
+weight: -10
 filters:
   filter_html:
     id: filter_html
