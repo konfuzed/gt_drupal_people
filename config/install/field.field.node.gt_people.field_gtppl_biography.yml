@@ -16,7 +16,7 @@ required: false
 translatable: false
 default_value:
   -
-    value: ''
+    value: ' '
     format: gt_people_html
 default_value_callback: ''
 settings: {  }
