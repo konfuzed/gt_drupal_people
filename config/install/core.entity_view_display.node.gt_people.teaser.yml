@@ -1,4 +1,3 @@
-uuid: 40605ada-9cc3-48a5-8e7f-2d9305d6896e
 langcode: en
 status: true
 dependencies:
@@ -51,8 +50,6 @@ dependencies:
     - telephone
     - text
     - user
-_core:
-  default_config_hash: 5xwsmR6UaYG8NqyfxwM0jjXbpswnPJUAp9Vu_75YeoU
 id: node.gt_people.teaser
 targetEntityType: node
 bundle: gt_people
