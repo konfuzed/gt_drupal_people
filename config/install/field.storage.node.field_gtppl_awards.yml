@@ -8,8 +8,7 @@ id: node.field_gtppl_awards
 field_name: field_gtppl_awards
 entity_type: node
 type: text
-settings:
-  max_length: 512
+settings: {  }
 module: text
 locked: false
 cardinality: 1

@@ -16,8 +16,8 @@ required: false
 translatable: false
 default_value:
   -
-    value: ' '
-    format: restricted_html
+    value: ''
+    format: gt_people_html
 default_value_callback: ''
 settings: {  }
 field_type: text
