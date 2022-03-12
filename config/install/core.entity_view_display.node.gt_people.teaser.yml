@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.gt_people.field_gtppl_awards
     - field.field.node.gt_people.field_gtppl_bio_summary
     - field.field.node.gt_people.field_gtppl_biography
-    - field.field.node.gt_people.field_gtppl_bldg
+    - field.field.node.gt_people.field_gtppl_bldg_cpsm_id
+    - field.field.node.gt_people.field_gtppl_bldg_name
+    - field.field.node.gt_people.field_gtppl_bldg_name_short
     - field.field.node.gt_people.field_gtppl_bldg_room
     - field.field.node.gt_people.field_gtppl_bldg_url_map
     - field.field.node.gt_people.field_gtppl_education
@@ -46,7 +48,6 @@ dependencies:
     - field.field.node.gt_people.field_gtppl_url_scopus
     - node.type.gt_people
   module:
-    - options
     - telephone
     - text
     - user
@@ -57,28 +58,29 @@ targetEntityType: node
 bundle: gt_people
 mode: teaser
 content:
-  field_gtppl_bldg:
-    type: list_default
-    label: above
-    settings: {  }
+  field_gtppl_bldg_name_short:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 4
     region: content
   field_gtppl_bldg_room:
     type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_gtppl_bldg_url_map:
-    type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_gtppl_bldg_url_map:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_gtppl_email:
     type: basic_string
@@ -93,7 +95,7 @@ content:
     settings:
       title: ''
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_gtppl_image_local:
     type: entity_reference_label
@@ -105,10 +107,18 @@ content:
     region: content
   field_gtppl_name_display_html:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_gtppl_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_gtppl_title_custom_short:
     type: string
@@ -128,24 +138,26 @@ content:
     region: content
   field_gtppl_url_cv_resume:
     type: string
-    label: above
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_gtppl_url_personal:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 10
     region: content
-  field_gtppl_url_personal:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 9
-    region: content
 hidden:
   field_gtppl_awards: true
   field_gtppl_bio_summary: true
   field_gtppl_biography: true
+  field_gtppl_bldg_cpsm_id: true
+  field_gtppl_bldg_name: true
   field_gtppl_education: true
   field_gtppl_gtaccount: true
   field_gtppl_image: true
@@ -153,7 +165,6 @@ hidden:
   field_gtppl_name_display_plain: true
   field_gtppl_name_first: true
   field_gtppl_name_last: true
-  field_gtppl_phone: true
   field_gtppl_pronouns: true
   field_gtppl_publications: true
   field_gtppl_research_group: true

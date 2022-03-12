@@ -6,7 +6,9 @@ dependencies:
     - field.field.node.gt_people.field_gtppl_awards
     - field.field.node.gt_people.field_gtppl_bio_summary
     - field.field.node.gt_people.field_gtppl_biography
-    - field.field.node.gt_people.field_gtppl_bldg
+    - field.field.node.gt_people.field_gtppl_bldg_cpsm_id
+    - field.field.node.gt_people.field_gtppl_bldg_name
+    - field.field.node.gt_people.field_gtppl_bldg_name_short
     - field.field.node.gt_people.field_gtppl_bldg_room
     - field.field.node.gt_people.field_gtppl_bldg_url_map
     - field.field.node.gt_people.field_gtppl_education
@@ -88,11 +90,29 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_gtppl_bldg:
-    type: options_select
-    weight: 161
+  field_gtppl_bldg_cpsm_id:
+    type: string_textfield
+    weight: 175
     region: content
-    settings: {  }
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_bldg_name:
+    type: text_textfield
+    weight: 176
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_bldg_name_short:
+    type: string_textfield
+    weight: 174
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_gtppl_bldg_room:
     type: string_textfield

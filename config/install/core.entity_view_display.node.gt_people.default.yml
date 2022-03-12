@@ -6,7 +6,9 @@ dependencies:
     - field.field.node.gt_people.field_gtppl_awards
     - field.field.node.gt_people.field_gtppl_bio_summary
     - field.field.node.gt_people.field_gtppl_biography
-    - field.field.node.gt_people.field_gtppl_bldg
+    - field.field.node.gt_people.field_gtppl_bldg_cpsm_id
+    - field.field.node.gt_people.field_gtppl_bldg_name
+    - field.field.node.gt_people.field_gtppl_bldg_name_short
     - field.field.node.gt_people.field_gtppl_bldg_room
     - field.field.node.gt_people.field_gtppl_bldg_url_map
     - field.field.node.gt_people.field_gtppl_education
@@ -79,12 +81,28 @@ content:
     third_party_settings: {  }
     weight: 23
     region: content
-  field_gtppl_bldg:
-    type: list_default
+  field_gtppl_bldg_cpsm_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_gtppl_bldg_name:
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 14
+    weight: 43
+    region: content
+  field_gtppl_bldg_name_short:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 41
     region: content
   field_gtppl_bldg_room:
     type: string
@@ -160,14 +178,14 @@ content:
     region: content
   field_gtppl_name_display_html:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
   field_gtppl_name_display_plain:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -175,7 +193,7 @@ content:
     region: content
   field_gtppl_name_first:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -183,7 +201,7 @@ content:
     region: content
   field_gtppl_name_last:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
