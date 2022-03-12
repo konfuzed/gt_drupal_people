@@ -9,7 +9,7 @@ field_name: field_gtppl_education
 entity_type: node
 type: text
 settings: {  }
-module: text
+module: text_long
 locked: false
 cardinality: 1
 translatable: true

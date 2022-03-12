@@ -7,7 +7,7 @@ dependencies:
 id: node.field_gtppl_awards
 field_name: field_gtppl_awards
 entity_type: node
-type: text
+type: text_long
 settings: {  }
 module: text
 locked: false
