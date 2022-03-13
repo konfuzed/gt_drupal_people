@@ -17,17 +17,19 @@
   text-align: center;
 }
 .gtppl-basic-contact a, .gtppl-basic-contact a:link {
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--gt-tech-dark-gold);
 }
 .gtppl-basic-contact dl {
-
 }
 .gtppl-basic-contact dt {
-
 }
 .gtppl-basic-contact dd {
-
 }
+.gtppl-basic-contact dd + dt {
+  margin-top: 1rem;
+}
+dd.-publinks { margin-bottom: 0.25rem; }
 
 .gtppl-profile-full {
   flex: 0 1 100%;
