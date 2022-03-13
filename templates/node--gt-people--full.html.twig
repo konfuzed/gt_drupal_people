@@ -119,13 +119,20 @@
 
   <div class="gtppl-header">
     <div class="gtppl-header-img">
-      <img src="{{ content.field_gtppl_image_url.0 }}">
+      {% if content.field_gtppl_image|render is not empty %}
+      | {{ content.field_gtppl_image|image_style('max_width_480') }}
+      {% elseif content.field_gtppl_image|render is not empty %}
+        <img src="{{ content.field_gtppl_image_url.0 }}">
+      {% else %}
+        <!-- Default Placeholder Image -->
+        <img src="https://cos.gatech.edu/sites/default/files/styles/leadership_image/public/default_leadershop.jpg" alt="">
+      {% endif %}
     </div>
     <div class="gtppl-header-txt">
       <h1>
       {% if content.field_gtppl_name_display_html|render is not empty %}
         {{ content.field_gtppl_name_display_html.0 }}
-      {% else if content.field_gtppl_name_display_plain|render is not empty %}
+      {% elseif content.field_gtppl_name_display_plain|render is not empty %}
         {{ content.field_gtppl_name_display_plain.0 }}
       {% else %}
         {{ content.field_gtppl_name_first.0 }} {{ content.field_gtppl_name_last.0 }}
@@ -134,7 +141,7 @@
       <p>
       {% if content.field_gtppl_title_custom_html|render is not empty %}
         {{ content.field_gtppl_title_custom_html.0 }}
-      {% else if content.field_gtppl_title_custom|render is not empty %}
+      {% elseif content.field_gtppl_title_custom|render is not empty %}
         {{ content.field_gtppl_title_custom.0 }}
       {% else %}
         {{ content.field_gtppl_title_official.0 }}
