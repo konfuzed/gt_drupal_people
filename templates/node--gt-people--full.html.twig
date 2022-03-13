@@ -86,29 +86,40 @@
 
     {% if content.field_gtppl_url_gscholar|render is not empty or content.field_gtppl_url_orcid|render is not empty or content.field_gtppl_url_publons|render is not empty or content.field_gtppl_url_pubmed|render is not empty or content.field_gtppl_url_researcherid|render is not empty or content.field_gtppl_url_researchgate|render is not empty or content.field_gtppl_url_scopus|render is not empty %}
       <dt class="-publinks">Publication Links</dt>
-      <dd class="-publinks">
         {% if content.field_gtppl_url_gscholar|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_gscholar.0 }}">Google Scholar</a>
         {% endif %}
         {% if content.field_gtppl_url_orcid|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_orcid.0 }}">OrcID</a>
+          </dd>
         {% endif %}
         {% if content.field_gtppl_url_publons|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_publons.0 }}">Publons</a>
+          </dd>
         {% endif %}
         {% if content.field_gtppl_url_pubmed|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_pubmed.0 }}">PubMed</a>
+          </dd>
         {% endif %}
         {% if content.field_gtppl_url_researcherid|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_researcherid.0 }}">ResearcherID</a>
+          </dd>
         {% endif %}
         {% if content.field_gtppl_url_researchgate|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_researchgate.0 }}">ResearchGate</a>
+          </dd>
         {% endif %}
         {% if content.field_gtppl_url_scopus|render is not empty %}
+          <dd class="-publinks">
           <a href="{{ content.field_gtppl_url_scopus.0 }}">Scopus</a>
+          </dd>
         {% endif %}
-      </dd>
     {% endif %}
 
     {% if content.field_gtppl_url_cv_resume|render is not empty %}
