@@ -20,8 +20,8 @@ settings:
       value: assistdean
       label: 'Assistant Dean'
     -
-      value: professor
-      label: Professor
+      value: faculty
+      label: Faculty
     -
       value: adjunct
       label: 'Adjunct Faculty'
