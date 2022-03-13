@@ -91,7 +91,7 @@
       </dd>
     {% endif %}
 
-    {% if content.field_gtppl_url_gscholar|render is not empty OR content.field_gtppl_url_orcid|render is not empty OR content.field_gtppl_url_publons|render is not empty OR content.field_gtppl_url_pubmed|render is not empty OR content.field_gtppl_url_researcherid|render is not empty OR content.field_gtppl_url_researchgate|render is not empty OR content.field_gtppl_url_scopus|render is not empty %}
+    {% if content.field_gtppl_url_gscholar|render is not empty or content.field_gtppl_url_orcid|render is not empty or content.field_gtppl_url_publons|render is not empty or content.field_gtppl_url_pubmed|render is not empty or content.field_gtppl_url_researcherid|render is not empty or content.field_gtppl_url_researchgate|render is not empty or content.field_gtppl_url_scopus|render is not empty %}
       <dt class="-publinks">Publication Links</dt>
       <dd class="-publinks">
         {{ content.field_gtppl_pronouns.0 }}
@@ -123,14 +123,22 @@
     </div>
     <div class="gtppl-header-txt">
       <h1>
-      {{ content.field_gtppl_name_display_html.0 }}
-      {{ content.field_gtppl_name_display_plain.0 }}
-      {{ content.field_gtppl_name_first.0 }} {{ content.field_gtppl_name_last.0 }}
+      {% if content.field_gtppl_name_display_html|render is not empty %}
+        {{ content.field_gtppl_name_display_html.0 }}
+      {% else if content.field_gtppl_name_display_plain|render is not empty %}
+        {{ content.field_gtppl_name_display_plain.0 }}
+      {% else %}
+        {{ content.field_gtppl_name_first.0 }} {{ content.field_gtppl_name_last.0 }}
+      {% endif %}
       </h1>
       <p>
-      {{ content.field_gtppl_title_custom_html.0 }}
-      {{ content.field_gtppl_title_custom.0 }}
-      {{ content.field_gtppl_title_official.0 }}
+      {% if content.field_gtppl_title_custom_html|render is not empty %}
+        {{ content.field_gtppl_title_custom_html.0 }}
+      {% else if content.field_gtppl_title_custom|render is not empty %}
+        {{ content.field_gtppl_title_custom.0 }}
+      {% else %}
+        {{ content.field_gtppl_title_official.0 }}
+      {% endif %}
       </p>
     </div>
   </div>
@@ -145,8 +153,6 @@
       {{ content.field_gtppl_research_history.0 }}
   {% endif %}
 
-
-  {{ content }}
 </div>
 
 </div>
