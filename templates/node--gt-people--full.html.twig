@@ -46,8 +46,8 @@
     {% endif %}
 
     {% if content.field_gtppl_url_personal|render is not empty %}
-      <dt class="-email">Email</dt>
-      <dd class="-email">
+      <dt class="-urlpersonal">Personal Site</dt>
+      <dd class="-urlpersonal">
         <a href="mailto:{{ content.field_gtppl_url_personal.0 }}">{{ content.field_gtppl_url_personal.0 }}</a>
       </dd>
     {% endif %}
@@ -84,17 +84,30 @@
       </dd>
     {% endif %}
 
-    {% if content.field_gtppl_email|render is not empty %}
-      <dt class="-email">Email</dt>
-      <dd class="-email">
-        <a href="mailto:{{ content.field_gtppl_email.0 }}">{{ content.field_gtppl_email.0 }}</a>
-      </dd>
-    {% endif %}
-
     {% if content.field_gtppl_url_gscholar|render is not empty or content.field_gtppl_url_orcid|render is not empty or content.field_gtppl_url_publons|render is not empty or content.field_gtppl_url_pubmed|render is not empty or content.field_gtppl_url_researcherid|render is not empty or content.field_gtppl_url_researchgate|render is not empty or content.field_gtppl_url_scopus|render is not empty %}
       <dt class="-publinks">Publication Links</dt>
       <dd class="-publinks">
-        {{ content.field_gtppl_pronouns.0 }}
+        {% if content.field_gtppl_url_gscholar|render is not empty %}
+          <a href="{{ content.field_gtppl_url_gscholar.0 }}">Google Scholar</a>
+        {% endif %}
+        {% if content.field_gtppl_url_orcid|render is not empty %}
+          <a href="{{ content.field_gtppl_url_orcid.0 }}">OrcID</a>
+        {% endif %}
+        {% if content.field_gtppl_url_publons|render is not empty %}
+          <a href="{{ content.field_gtppl_url_publons.0 }}">Publons</a>
+        {% endif %}
+        {% if content.field_gtppl_url_pubmed|render is not empty %}
+          <a href="{{ content.field_gtppl_url_pubmed.0 }}">PubMed</a>
+        {% endif %}
+        {% if content.field_gtppl_url_researcherid|render is not empty %}
+          <a href="{{ content.field_gtppl_url_researcherid.0 }}">ResearcherID</a>
+        {% endif %}
+        {% if content.field_gtppl_url_researchgate|render is not empty %}
+          <a href="{{ content.field_gtppl_url_researchgate.0 }}">ResearchGate</a>
+        {% endif %}
+        {% if content.field_gtppl_url_scopus|render is not empty %}
+          <a href="{{ content.field_gtppl_url_scopus.0 }}">Scopus</a>
+        {% endif %}
       </dd>
     {% endif %}
 

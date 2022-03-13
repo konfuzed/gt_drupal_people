@@ -38,11 +38,20 @@
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: start;
 }
 .gtppl-header-img {
   max-width: 20rem;
+  flex: 0 1 20rem;
 }
+.gtppl-header-txt {
+  flex: 1 0 10%;
+  padding: 0 1rem 1rem;
+}
+.gtppl-header-txt h1 {
+  border-bottom: 1px solid var(--gt-black);
+}
+
 @media screen and (min-width: 901px) {
   .gt_people--view-mode--full {
     display: flex;
