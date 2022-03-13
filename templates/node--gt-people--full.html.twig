@@ -37,40 +37,85 @@
   <h3>Contact Information</h3>
 
   <dl class="gtppl-contact-info">
-  
-    {% if content.field_gtppl_bldg_name_short is not empty %}
-      <dt class="-location">Location</dt>
-      <dd class="-location">
-        {{ content.field_gtppl_bldg_name_short.0 }} {{ content.field_gtppl_bldg_room.0}}
-      </dd>
-    {% endif %}
 
-    {% if content.field_gtppl_phone is not empty %}
-      <dt class="-phone">Phone</dt>
-      <dd class="-phone">
-        {{ content.field_gtppl_phone.0 }}
-      </dd>
-    {% endif %}
-
-    {% if content.field_gtppl_email is not empty %}
+    {% if content.field_gtppl_email|render is not empty %}
       <dt class="-email">Email</dt>
       <dd class="-email">
         <a href="mailto:{{ content.field_gtppl_email.0 }}">{{ content.field_gtppl_email.0 }}</a>
       </dd>
     {% endif %}
 
-    {% if content.field_gtppl_fax is not empty %}
+    {% if content.field_gtppl_url_personal|render is not empty %}
+      <dt class="-email">Email</dt>
+      <dd class="-email">
+        <a href="mailto:{{ content.field_gtppl_url_personal.0 }}">{{ content.field_gtppl_url_personal.0 }}</a>
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_phone|render is not empty %}
+      <dt class="-phone">Phone</dt>
+      <dd class="-phone">
+        {{ content.field_gtppl_phone.0 }}
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_fax|render is not empty %}
       <dt class="-fax">Fax</dt>
       <dd class="-fax">
         {{ content.field_gtppl_fax.0 }}
       </dd>
     {% endif %}
 
+    {% if content.field_gtppl_bldg_name_short|render is not empty %}
+      <dt class="-location">Location</dt>
+      <dd class="-location">
+        {{ content.field_gtppl_bldg_name_short.0 }} {{ content.field_gtppl_bldg_room.0}}
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_pronouns|render is not empty %}
+      <dt class="-pronouns">Fax</dt>
+      <dd class="-pronouns">
+        {{ content.field_gtppl_pronouns.0 }}
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_url_gscholar|render is not empty OR content.field_gtppl_url_orcid|render is not empty OR content.field_gtppl_url_publons|render is not empty OR content.field_gtppl_url_pubmed|render is not empty OR content.field_gtppl_url_researcherid|render is not empty OR content.field_gtppl_url_researchgate|render is not empty OR content.field_gtppl_url_scopus|render is not empty%}
+      <dt class="-publinks">Publication Links</dt>
+      <dd class="-publinks">
+        {{ content.field_gtppl_pronouns.0 }}
+      </dd>
+    {% endif %}
   </dl>
 
 </div>
 
 <div class="gtppl-profile-full">
+
+  <div class="gtppl-header">
+    <div class="gtppl-header-img">
+      <img src="{{ content.field_gtppl_image_url.0 }}">
+    </div>
+    <div class="gtppl-header-txt">
+      <h1>
+      {{ content.field_gtppl_name_display_html.0 }}
+      {{ content.field_gtppl_name_display_plain.0 }}
+      {{ content.field_gtppl_name_first.0 }} {{ content.field_gtppl_name_last.0 }}
+      </h1>
+      <p>
+      {{ content.field_gtppl_title_custom_html.0 }}
+      {{ content.field_gtppl_title_custom.0 }}
+      {{ content.field_gtppl_title_official.0 }}
+      </p>
+    </div>
+  </div>
+
+  {% if content.field_gtppl_education|render is not empty %}
+    <h3>Education</h3>
+      {{ content.field_gtppl_education.0 }}
+  {% endif %}
+
+
   {{ content }}
 </div>
 

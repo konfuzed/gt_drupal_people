@@ -1,3 +1,7 @@
+.node--type-gt-people .gt-page-title {
+  display: none;
+}
+
 .gtppl-basic-contact {
   flex: 0 1 100%;
   border: 1px solid #ddd;
@@ -11,6 +15,9 @@
   margin-bottom: 1rem;
   font-size: 1.125rem;
   text-align: center;
+}
+.gtppl-basic-contact a, .gtppl-basic-contact a:link {
+  font-weight: 400;
 }
 .gtppl-basic-contact dl {
 
@@ -26,6 +33,16 @@
   flex: 0 1 100%;
 }
 
+.gtppl-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.gtppl-header-img {
+  max-width: 20rem;
+}
 @media screen and (min-width: 901px) {
   .gt_people--view-mode--full {
     display: flex;
