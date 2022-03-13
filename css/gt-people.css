@@ -1,0 +1,43 @@
+.gtppl-basic-contact {
+  flex: 0 1 100%;
+  border: 1px solid #ddd;
+  padding: 0 1.5rem .75rem 1.5rem;
+  font-size: .875rem;
+}
+.gtppl-basic-contact h3 {
+  font-style: italic;
+  border-bottom: 1px solid #ddd;
+  padding: .75rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  text-align: center;
+}
+.gtppl-basic-contact dl {
+
+}
+.gtppl-basic-contact dt {
+
+}
+.gtppl-basic-contact dd {
+
+}
+
+.gtppl-profile-full {
+  flex: 0 1 100%;
+}
+
+@media screen and (min-width: 901px) {
+  .gt_people--view-mode--full {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .gtppl-profile-full {
+    flex: 0 1 70%;
+  }
+  .gtppl-basic-contact {
+    flex: 0 1 25%;
+  }
+}

@@ -26,12 +26,52 @@
 
 {%
   set classes = [
-  'gt_people',
-  'gt_people--' ~ gt_people.id,
-  not node.isPublished() ? 'is-unpublished',
+  'gtppl',
   view_mode ? 'gt_people--view-mode--' ~ view_mode|clean_class,
 ]
 %}
 <div{{ attributes.setAttribute('id', gt_people.id).addClass(classes) }}>
+
+<div class="gtppl-basic-contact">
+
+  <h3>Contact Information</h3>
+
+  <dl class="gtppl-contact-info">
+  
+    {% if content.field_gtppl_bldg_name_short|render is not empty %}
+      <dt class="-location">Location</dt>
+      <dd class="-location">
+        {{ content.field_gtppl_bldg_name_short }} {{ content.field_gtppl_bldg_room}}
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_phone|render is not empty %}
+      <dt class="-phone">Phone</dt>
+      <dd class="-phone">
+        {{ content.field_gtppl_phone }}
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_email|render is not empty %}
+      <dt class="-email">Email</dt>
+      <dd class="-email">
+        <a href="mailto:{{ content.field_gtppl_email }}">{{ content.field_gtppl_email }}</a>
+      </dd>
+    {% endif %}
+
+    {% if content.field_gtppl_fax|render is not empty %}
+      <dt class="-fax">Fax</dt>
+      <dd class="-fax">
+        {{ content.field_gtppl_fax }}
+      </dd>
+    {% endif %}
+
+  </dl>
+
+</div>
+
+<div class="gtppl-profile-full">
   {{ content }}
+</div>
+
 </div>
