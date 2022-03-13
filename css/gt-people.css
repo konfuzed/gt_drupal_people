@@ -39,5 +39,6 @@
   }
   .gtppl-basic-contact {
     flex: 0 1 25%;
+    order: 1;
   }
 }

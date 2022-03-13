@@ -38,31 +38,31 @@
 
   <dl class="gtppl-contact-info">
   
-    {% if content.field_gtppl_bldg_name_short.value is not empty %}
+    {% if content.field_gtppl_bldg_name_short is not empty %}
       <dt class="-location">Location</dt>
       <dd class="-location">
-        {{ content.field_gtppl_bldg_name_short.value }} {{ content.field_gtppl_bldg_room.value}}
+        {{ content.field_gtppl_bldg_name_short.0 }} {{ content.field_gtppl_bldg_room.0}}
       </dd>
     {% endif %}
 
-    {% if content.field_gtppl_phone.value is not empty %}
+    {% if content.field_gtppl_phone is not empty %}
       <dt class="-phone">Phone</dt>
       <dd class="-phone">
-        {{ content.field_gtppl_phone }}
+        {{ content.field_gtppl_phone.0 }}
       </dd>
     {% endif %}
 
-    {% if content.field_gtppl_email.value is not empty %}
+    {% if content.field_gtppl_email is not empty %}
       <dt class="-email">Email</dt>
       <dd class="-email">
-        <a href="mailto:{{ content.field_gtppl_email.value }}">{{ content.field_gtppl_email.value }}</a>
+        <a href="mailto:{{ content.field_gtppl_email.0 }}">{{ content.field_gtppl_email.0 }}</a>
       </dd>
     {% endif %}
 
-    {% if content.field_gtppl_fax.value is not empty %}
+    {% if content.field_gtppl_fax is not empty %}
       <dt class="-fax">Fax</dt>
       <dd class="-fax">
-        {{ content.field_gtppl_fax.value }}
+        {{ content.field_gtppl_fax.0 }}
       </dd>
     {% endif %}
 
