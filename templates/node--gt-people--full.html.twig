@@ -132,9 +132,14 @@
 
   <div class="gtppl-header">
     <div class="gtppl-header-img">
+{#
       {% if content.field_gtppl_image|render is not empty %}
-      | {{ content.field_gtppl_image|image_style('max_width_480') }}
-      {% elseif content.field_gtppl_image|render is not empty %}
+        {{ content.field_gtppl_image|image_style('max_width_480') }}
+      {% elseif content.field_gtppl_image_local|render is not empty %}
+        <img src="{{ content.field_gtppl_image_local.0 }}">
+       {% elseif content.field_gtppl_image_url|render is not empty %}
+#}
+      {% if content.field_gtppl_image_url|render is not empty %}
         <img src="{{ content.field_gtppl_image_url.0 }}">
       {% else %}
         <!-- Default Placeholder Image -->
@@ -143,9 +148,12 @@
     </div>
     <div class="gtppl-header-txt">
       <h1>
+{#
       {% if content.field_gtppl_name_display_html|render is not empty %}
         {{ content.field_gtppl_name_display_html.0 }}
       {% elseif content.field_gtppl_name_display_plain|render is not empty %}
+#}
+      {% if content.field_gtppl_name_display_plain|render is not empty %}
         {{ content.field_gtppl_name_display_plain.0 }}
       {% else %}
         {{ content.field_gtppl_name_first.0 }} {{ content.field_gtppl_name_last.0 }}
